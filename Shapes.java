@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.lang.*;
-public class Main{
+public class Shapes{
 public static void main(String[] args) {
 
 
@@ -12,6 +12,7 @@ public static void main(String[] args) {
  System.out.println("\nThe volume of the triangleprism is: " + triangularPrism(1.0,1.0,1.0,1.0,1.0));
  System.out.println("\nThe volume of the rectangularprism is: " + rectangularprism(1.0,1.0,1.0,1.0));
  System.out.println("\nThe volume of the sphere is: " + sphere(1.0,1.0,1.0));
+ System.out.println("\nThe volume of the cylinder is: " + cylinder(1.0,1.0,1.0));
 
 
 }   //close method
@@ -100,5 +101,14 @@ public static double circle(double radius, double area){
       return volumeSphere;
     } // close method for sphere
 
+    public static double cylinder(double radius, double h, double volumeCylinder){
+      Scanner input = new Scanner(System.in);
+      System.out.println("What is the radius of the cylinder?");
+      radius = input.nextDouble();
+      System.out.println("What is the height of the cylinder?");
+      h = input.nextDouble();
+      volumeCylinder = (radius * radius * h * Math.PI);
+      return volumeCylinder;
+    }// close method for cylinder
+
  }//close class
-      
